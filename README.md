@@ -1,11 +1,11 @@
 
-![Figma design](/assets/images/github_banner.png)
+![Figma design](/assets/images/resources/github_banner.png)
 
 
 
 ## Getting Started
 
-The inspiration of the Flutter app is from a figma design by **[Aleksandr Volodkovich](https://www.figma.com/@tw1r)**.
+The inspiration of this Flutter app is from a figma design by **[Aleksandr Volodkovich](https://www.figma.com/@tw1r)**.
 
 A few resources to get you started for the project:
 
