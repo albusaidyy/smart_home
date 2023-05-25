@@ -14,7 +14,7 @@ class SearchView extends StatelessWidget {
       body: Container(
           color: const Color(0xFF211D1D),
           child: Padding(
-            padding: EdgeInsets.only(top: 60 - topPadding, left: 20, right: 20),
+            padding: EdgeInsets.only(top: 60, left: 20, right: 20),
             child: Column(
               children: [
                 Row(
