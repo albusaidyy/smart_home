@@ -13,7 +13,7 @@ A few resources to get you started for the project:
 - [Screenshots of the App](/assets/images/resources)
 
 # Simulation
-Take a look at the demo **[App](https://meals-fa154.web.app/#/)**.
+Take a look at the demo **[App](https://smart-home-ke.web.app)**.
 
 >**This is only a simulation of the mobile user experience from your laptop, desktop or tablet.**
 
