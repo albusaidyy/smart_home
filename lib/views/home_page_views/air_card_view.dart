@@ -24,64 +24,67 @@ class _AirCardViewState extends State<AirCardView> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: const Color(0xFF282424),
-      shadowColor: Colors.transparent,
-      shape: RoundedRectangleBorder(
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 20, 20, 20),
+      decoration: BoxDecoration(
+        color: const Color(0xFF282424),
         borderRadius: BorderRadius.circular(24),
       ),
-      child: Container(
-        decoration: BoxDecoration(
-          color: const Color(0xFF282424),
-          borderRadius: BorderRadius.circular(24),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    widget.valuePercentage,
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                  Image.asset(widget.imageIcon),
-                ],
+              Text(
+                widget.valuePercentage,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
-              Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    widget.valueTitle,
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
-                  Text(
-                    'Air',
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 41.91),
+                child: Image.asset(
+                  widget.imageIcon,
+                  color: const Color(0xFFF8F8F8),
+                ),
               ),
-              const Divider(
-                color: Color(0xFF393535),
-                thickness: 1,
-              ),
-              IosRadioButton(
-                  isSelected: isSelected,
-                  radioTitle: widget.radioTitle,
-                  onSelectionChanged: (value) {
-                    setState(() {
-                      isSelected = value;
-                    });
-                  })
             ],
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  widget.valueTitle,
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+                Text(
+                  'Air',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+              ],
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 32.0),
+            child: Divider(
+              height: 0,
+              color: Color(0xFF393535),
+              thickness: 1,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 20.0),
+            child: IosRadioButton(
+                isSelected: isSelected,
+                radioTitle: widget.radioTitle,
+                onSelectionChanged: (value) {
+                  setState(() {
+                    isSelected = value;
+                  });
+                }),
+          ),
+        ],
       ),
     );
   }

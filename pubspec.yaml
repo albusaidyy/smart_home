@@ -37,7 +37,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_xlider: ^3.5.0
   dotted_border: ^2.0.0+3
-  device_preview: ^1.1.0
 
 dev_dependencies:
   flutter_test:

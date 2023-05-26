@@ -39,13 +39,12 @@ class HomeView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(
-                      height: 198,
                       child: AirRowView(),
                     ),
                     SizedBox(
                       height: 12,
                     ),
-                    HomeSliderCard(),
+                    SizedBox(child: HomeSliderCard()),
                   ],
                 ),
               ),

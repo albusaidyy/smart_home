@@ -14,35 +14,34 @@ class NewDeviceCard extends StatelessWidget {
       strokeWidth: 2,
       borderType: BorderType.RRect,
       radius: const Radius.circular(24),
-      padding: const EdgeInsets.only(top: 24),
       child: ClipRRect(
         borderRadius: const BorderRadius.all(Radius.circular(24)),
-        child: SizedBox(
-          height: 186,
-          width: 169,
+        child: Center(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/images/wifi.png',
+              Padding(
+                padding: const EdgeInsets.only(top: 24),
+                child: Image.asset(
+                  'assets/images/wifi.png',
+                ),
               ),
-              const SizedBox(
-                height: 19.2,
+              Padding(
+                padding: const EdgeInsets.only(top: 19.2),
+                child: Text(
+                  'Not found\n device?',
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
               ),
-              Text(
-                'Not found\n device?',
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              const SizedBox(
-                height: 12,
-              ),
-              const Text(
-                'Select manually',
-                style: TextStyle(
+              const Padding(
+                padding: EdgeInsets.only(top: 12, bottom: 27),
+                child: Text(
+                  'Select manually',
+                  style: TextStyle(
                     fontWeight: FontWeight.w500,
                     color: Color(0xFFFFB267),
                     fontSize: 12,
-                    height: 0.6),
+                  ),
+                ),
               )
             ],
           ),

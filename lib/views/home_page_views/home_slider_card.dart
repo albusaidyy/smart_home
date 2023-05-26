@@ -32,28 +32,28 @@ class SliderColumn extends StatefulWidget {
 }
 
 class _SliderColumnState extends State<SliderColumn> {
-  double _value1 = 0.65;
-  double _value2 = 0.45;
+  double _value1 = 0.685;
+  double _value2 = 0.433;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding:
-          const EdgeInsets.only(left: 20.0, top: 20.0, right: 23.0, bottom: 20),
+    return Container(
+      margin: const EdgeInsets.only(top: 20, bottom: 30, left: 20, right: 20),
       child: Column(
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Main Light',
+                'Main light',
                 style: Theme.of(context).textTheme.bodySmall,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
+                    // color: Colors.blue,
                     child: SliderTheme(
                       data: SliderThemeData(
+                        overlayShape: SliderComponentShape.noOverlay,
                         activeTrackColor: const Color(0xFFFFB367),
                         inactiveTrackColor: const Color(0x336B6869),
                         trackShape: CustomTrackShape(),
@@ -74,25 +74,29 @@ class _SliderColumnState extends State<SliderColumn> {
                     padding: EdgeInsets.only(left: 19.22),
                     child: Image(
                       image: AssetImage('assets/images/lamp.png'),
+                      color: Color(0xFFF8F8F8),
                     ),
                   ),
                 ],
-              ),
+              )
             ],
+          ),
+          const SizedBox(
+            height: 8.0,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Floor Lamp',
+                'Floor lamp',
                 style: Theme.of(context).textTheme.bodySmall,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
                     child: SliderTheme(
                       data: SliderThemeData(
+                        overlayShape: SliderComponentShape.noOverlay,
                         activeTrackColor: const Color(0xFFFFB367),
                         inactiveTrackColor: const Color(0x336B6869),
                         trackShape: CustomTrackShape(),
@@ -113,6 +117,7 @@ class _SliderColumnState extends State<SliderColumn> {
                     padding: EdgeInsets.only(left: 19.22),
                     child: Image(
                       image: AssetImage('assets/images/table_lamp.png'),
+                      color: Color(0xFFF8F8F8),
                     ),
                   ),
                 ],
@@ -145,7 +150,7 @@ class CustomTrackShape extends RoundedRectSliderTrackShape {
 
 class CircleThumbShape extends SliderComponentShape {
   final double thumbRadius = 15.5;
-  final double thumbRadius2 = 8.0;
+  final double thumbRadius2 = 7.5;
 
   @override
   Size getPreferredSize(bool isEnabled, bool isDiscrete) {

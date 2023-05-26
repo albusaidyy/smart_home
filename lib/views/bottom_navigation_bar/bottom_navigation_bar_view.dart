@@ -38,29 +38,32 @@ class _BottomNavigatonBarViewState extends State<BottomNavigatonBarView> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       extendBody: true,
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        unselectedItemColor: const Color(0xFFF8F8F8),
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: const Color(0xFF211D1D),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage('assets/images/home_icon.png')),
-              label: 'Home'),
-          BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage('assets/images/search_icon.png')),
-              label: 'search'),
-          BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage('assets/images/grid_icon.png')),
-              label: 'Grid'),
-          BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage('assets/images/profile_icon.png')),
-              label: 'Profile'),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: const Color(0xFFFFB267),
-        onTap: _onItemTapped,
+      bottomNavigationBar: SizedBox(
+        height: 89,
+        child: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          unselectedItemColor: const Color(0xFFF8F8F8),
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: const Color(0xFF211D1D),
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+                icon: ImageIcon(AssetImage('assets/images/home_icon.png')),
+                label: 'Home'),
+            BottomNavigationBarItem(
+                icon: ImageIcon(AssetImage('assets/images/search_icon.png')),
+                label: 'search'),
+            BottomNavigationBarItem(
+                icon: ImageIcon(AssetImage('assets/images/grid_icon.png')),
+                label: 'Grid'),
+            BottomNavigationBarItem(
+                icon: ImageIcon(AssetImage('assets/images/profile_icon.png')),
+                label: 'Profile'),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: const Color(0xFFFFB267),
+          onTap: _onItemTapped,
+        ),
       ),
       body: _widgetOptions.elementAt(_selectedIndex),
     );
