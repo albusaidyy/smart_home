@@ -13,7 +13,7 @@ class AddDeviceButton extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              bottom: 90,
+              bottom: 86,
               child: GestureDetector(
                 onTap: () {},
                 child: Container(

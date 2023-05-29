@@ -12,7 +12,7 @@ class SearchView extends StatelessWidget {
       body: Container(
           color: const Color(0xFF211D1D),
           child: Padding(
-            padding: EdgeInsets.only(top: 60, left: 20, right: 20),
+            padding: const EdgeInsets.only(top: 60, left: 20, right: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -42,7 +42,7 @@ class SearchView extends StatelessWidget {
                 ),
                 GridView.count(
                   padding: const EdgeInsets.only(top: 32),
-                  childAspectRatio: 169 / 189.5,
+                  childAspectRatio: 169 / 189,
                   shrinkWrap: true,
                   primary: false,
                   crossAxisSpacing: 12,
@@ -55,7 +55,7 @@ class SearchView extends StatelessWidget {
                               const BorderRadius.all(Radius.circular(24)),
                           border: Border.all(
                               color: const Color(0x99FFB267),
-                              width: 1,
+                              width: 1.3,
                               style: BorderStyle.solid)),
                       child: const Gridcard(
                         searchImage: 'assets/images/bork.png',

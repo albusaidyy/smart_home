@@ -36,7 +36,7 @@ class Gridcard extends StatelessWidget {
               searchDescrption,
               style: TextStyle(
                   fontWeight: FontWeight.w500,
-                  color: Color(0xFFFFFFFF).withOpacity(0.6),
+                  color: const Color(0xFFFFFFFF).withOpacity(0.6),
                   fontSize: 12,
                   height: 0.8195),
             ),

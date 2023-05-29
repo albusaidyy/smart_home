@@ -29,7 +29,9 @@ class _BottomNavigatonBarViewState extends State<BottomNavigatonBarView> {
 
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index;
+      if (index != 2 && index != 3) {
+        _selectedIndex = index;
+      }
     });
   }
 
@@ -39,8 +41,10 @@ class _BottomNavigatonBarViewState extends State<BottomNavigatonBarView> {
       extendBodyBehindAppBar: true,
       extendBody: true,
       bottomNavigationBar: SizedBox(
-        height: 89,
+        height: 86,
         child: BottomNavigationBar(
+          selectedFontSize: 1,
+          elevation: 0,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           unselectedItemColor: const Color(0xFFF8F8F8),

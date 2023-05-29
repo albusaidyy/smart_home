@@ -37,7 +37,8 @@ class _SliderColumnState extends State<SliderColumn> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 20, bottom: 30, left: 20, right: 20),
+      margin:
+          const EdgeInsets.only(top: 20, bottom: 24, left: 20, right: 23.22),
       child: Column(
         children: [
           Column(
@@ -50,7 +51,6 @@ class _SliderColumnState extends State<SliderColumn> {
               Row(
                 children: [
                   Expanded(
-                    // color: Colors.blue,
                     child: SliderTheme(
                       data: SliderThemeData(
                         overlayShape: SliderComponentShape.noOverlay,

@@ -26,10 +26,22 @@ class NewDeviceCard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 19.2),
-                child: Text(
-                  'Not found\n device?',
-                  style: Theme.of(context).textTheme.titleMedium,
+                padding: const EdgeInsets.only(top: 18.2),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Not found',
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    const SizedBox(
+                      height: 3,
+                    ),
+                    Text(
+                      'device?',
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                  ],
                 ),
               ),
               const Padding(
